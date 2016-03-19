@@ -7,24 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92137FD11C7D9EA20074958B /* SDL2_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929BD1C41C7A6331009DABD0 /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		92137FD21C7D9EA20074958B /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929BD1C61C7A6331009DABD0 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		92137FD91C7D9EE70074958B /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92137FD71C7D9EE70074958B /* SDL2_image.framework */; };
+		92137FDA1C7D9EE70074958B /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92137FD81C7D9EE70074958B /* SDL2.framework */; };
 		929BD1BE1C7A6312009DABD0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 929BD1BD1C7A6312009DABD0 /* main.cpp */; };
+		929BD1D11C7A790E009DABD0 /* bishop.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929BD1CB1C7A790E009DABD0 /* bishop.png */; };
+		929BD1D21C7A790E009DABD0 /* king.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929BD1CC1C7A790E009DABD0 /* king.png */; };
+		929BD1D31C7A790E009DABD0 /* knight.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929BD1CD1C7A790E009DABD0 /* knight.png */; };
+		929BD1D41C7A790E009DABD0 /* pawn.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929BD1CE1C7A790E009DABD0 /* pawn.png */; };
+		929BD1D51C7A790E009DABD0 /* queen.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929BD1CF1C7A790E009DABD0 /* queen.png */; };
+		929BD1D61C7A790E009DABD0 /* rook.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929BD1D01C7A790E009DABD0 /* rook.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		929BD1B81C7A6312009DABD0 /* CopyFiles */ = {
+		92137FD01C7D9E7F0074958B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = Resources/Frameworks;
+			dstSubfolderSpec = 7;
 			files = (
+				92137FD11C7D9EA20074958B /* SDL2_image.framework in CopyFiles */,
+				92137FD21C7D9EA20074958B /* SDL2.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929BD1B81C7A6312009DABD0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Resources/Images;
+			dstSubfolderSpec = 7;
+			files = (
+				929BD1D11C7A790E009DABD0 /* bishop.png in CopyFiles */,
+				929BD1D21C7A790E009DABD0 /* king.png in CopyFiles */,
+				929BD1D31C7A790E009DABD0 /* knight.png in CopyFiles */,
+				929BD1D41C7A790E009DABD0 /* pawn.png in CopyFiles */,
+				929BD1D51C7A790E009DABD0 /* queen.png in CopyFiles */,
+				929BD1D61C7A790E009DABD0 /* rook.png in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		92137FD71C7D9EE70074958B /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = "../../Library/Developer/Xcode/DerivedData/Chess1-fctiuwwrapihtpffaximatlpztgo/Build/Products/Debug/Resources/Frameworks/SDL2_image.framework"; sourceTree = "<group>"; };
+		92137FD81C7D9EE70074958B /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = "../../Library/Developer/Xcode/DerivedData/Chess1-fctiuwwrapihtpffaximatlpztgo/Build/Products/Debug/Resources/Frameworks/SDL2.framework"; sourceTree = "<group>"; };
 		929BD1BA1C7A6312009DABD0 /* Chess1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chess1; sourceTree = BUILT_PRODUCTS_DIR; };
 		929BD1BD1C7A6312009DABD0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		929BD1C41C7A6331009DABD0 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = /Library/Frameworks/SDL2_image.framework; sourceTree = "<absolute>"; };
+		929BD1C61C7A6331009DABD0 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
+		929BD1CB1C7A790E009DABD0 /* bishop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bishop.png; path = png/bishop.png; sourceTree = "<group>"; };
+		929BD1CC1C7A790E009DABD0 /* king.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = king.png; path = png/king.png; sourceTree = "<group>"; };
+		929BD1CD1C7A790E009DABD0 /* knight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = knight.png; path = png/knight.png; sourceTree = "<group>"; };
+		929BD1CE1C7A790E009DABD0 /* pawn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pawn.png; path = png/pawn.png; sourceTree = "<group>"; };
+		929BD1CF1C7A790E009DABD0 /* queen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = queen.png; path = png/queen.png; sourceTree = "<group>"; };
+		929BD1D01C7A790E009DABD0 /* rook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rook.png; path = png/rook.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92137FD91C7D9EE70074958B /* SDL2_image.framework in Frameworks */,
+				92137FDA1C7D9EE70074958B /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +80,8 @@
 		929BD1B11C7A6312009DABD0 = {
 			isa = PBXGroup;
 			children = (
+				929BD1D71C7A7915009DABD0 /* Resources */,
+				929BD1CA1C7A6336009DABD0 /* Frameworks */,
 				929BD1BC1C7A6312009DABD0 /* Chess1 */,
 				929BD1BB1C7A6312009DABD0 /* Products */,
 			);
@@ -62,6 +103,36 @@
 			path = Chess1;
 			sourceTree = "<group>";
 		};
+		929BD1CA1C7A6336009DABD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92137FD71C7D9EE70074958B /* SDL2_image.framework */,
+				92137FD81C7D9EE70074958B /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		929BD1D71C7A7915009DABD0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				929BD1D81C7A7926009DABD0 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		929BD1D81C7A7926009DABD0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				929BD1CB1C7A790E009DABD0 /* bishop.png */,
+				929BD1CC1C7A790E009DABD0 /* king.png */,
+				929BD1CD1C7A790E009DABD0 /* knight.png */,
+				929BD1CE1C7A790E009DABD0 /* pawn.png */,
+				929BD1CF1C7A790E009DABD0 /* queen.png */,
+				929BD1D01C7A790E009DABD0 /* rook.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +143,7 @@
 				929BD1B61C7A6312009DABD0 /* Sources */,
 				929BD1B71C7A6312009DABD0 /* Frameworks */,
 				929BD1B81C7A6312009DABD0 /* CopyFiles */,
+				92137FD01C7D9E7F0074958B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -207,6 +279,10 @@
 		929BD1C21C7A6312009DABD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +290,10 @@
 		929BD1C31C7A6312009DABD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -237,6 +317,7 @@
 				929BD1C31C7A6312009DABD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
