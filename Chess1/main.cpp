@@ -11,7 +11,7 @@
 #include <functional>
 #include <string>
 #include <SDL2/SDL.h>
-#include <SDL2_image/SDL_image.h>
+#include <SDL2/SDL_image.h>
 
 typedef struct
 {
@@ -32,8 +32,8 @@ typedef struct
 static const char *TITLE = "Chess";
 static const int WINDOW_POSX = SDL_WINDOWPOS_UNDEFINED;
 static const int WINDOW_POSY = SDL_WINDOWPOS_UNDEFINED;
-static const int WINDOW_WIDTH = 1024;
-static const int WINDOW_HEIGHT = 1024;
+static const int WINDOW_WIDTH = 728;
+static const int WINDOW_HEIGHT = 728;
 static const Uint32 WINDOW_FLAGS = 0;
 static const Uint32 RENDERER_FLAGS = SDL_RENDERER_ACCELERATED |
                                      SDL_RENDERER_PRESENTVSYNC;
@@ -44,6 +44,8 @@ static const int COLOR_WHITE = -1;
 static const int COLOR_BLACK = 1;
 static const int TEXTURE_WIDTH = 128;
 static const int TEXTURE_HEIGHT = 128;
+static const int CELL_WIDTH = WINDOW_WIDTH / BOARD_SIZE;
+static const int CELL_HEIGHT = WINDOW_HEIGHT / BOARD_SIZE;
 
 static void initPieces();
 static void initBoard();
@@ -115,8 +117,8 @@ static std::vector<ChessPiece> possiblePieces;
 
 static SDL_Rect mouseBox = {
     0, 0,
-    TEXTURE_WIDTH,
-    TEXTURE_HEIGHT
+    CELL_WIDTH,
+    CELL_HEIGHT
 };
 
 static Uint32 mouseState = SDL_GetMouseState(&mouseBox.x, &mouseBox.y);
@@ -499,10 +501,10 @@ static void updateMouseBox()
     bool lastFramePressed = mouseState & SDL_BUTTON_LMASK;
     
     mouseState = SDL_GetMouseState(&mouseBox.x, &mouseBox.y);
-    mouseBox.x /= TEXTURE_WIDTH;
-    mouseBox.x *= TEXTURE_WIDTH;
-    mouseBox.y /= TEXTURE_HEIGHT;
-    mouseBox.y *= TEXTURE_HEIGHT;
+    mouseBox.x /= mouseBox.w;
+    mouseBox.x *= mouseBox.w;
+    mouseBox.y /= mouseBox.h;
+    mouseBox.y *= mouseBox.h;
     
     Vector2i mouseBoxSquarePosition = getMouseBoxSquarePosition();
     
@@ -792,8 +794,8 @@ static SDL_Texture *textureForPath(SDL_Renderer *renderer, std::string path)
 static Vector2i getMouseBoxSquarePosition()
 {
     return {
-        mouseBox.x / TEXTURE_WIDTH,
-        mouseBox.y / TEXTURE_HEIGHT
+        mouseBox.x / mouseBox.w,
+        mouseBox.y / mouseBox.h 
     };
 }
 
